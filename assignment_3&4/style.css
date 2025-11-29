@@ -1,0 +1,95 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: whitesmoke;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background: #222;
+  padding: 1rem 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links li {
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff5722;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+
+}
+
+.hero img {
+  max-width: 500px;
+  margin-bottom: 1rem;
+  
+}
+
+.hero h3 {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+
+.desc {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.desc h2 {
+  color: #ff5722;
+  margin-bottom: 1rem;
+}
+
+
+.timeline ul li{
+    padding: 20px;
+    border-left: 2px solid #ff5722;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.timeline ul{
+    list-style-type: none;
+}
+
+.timeline h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+

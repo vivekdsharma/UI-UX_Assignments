@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Introducing Javascript</title>
+</head>
+<body>
+
+
+    <!-- <form class="my_form" onsubmit="return validateForm()">
+        <label for="name">Enter Your Name</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Enter Your Email</label>
+        <input type="text" name="email" id="email">
+
+        <label for="age">Enter Your Age</label>
+        <input type="text" name="age" id="age" >
+
+
+        <button type="submit">Submit</button>
+
+
+
+    </form> -->
+
+
+    <div id="output"></div>
+
+
+    <script>
+        // let a = Number(prompt("enter the value of a"))
+        // let b = Number(prompt("enter the value of b"))
+        // let operation=prompt("enter the operation")
+
+        // switch (operation) {
+        //     case "+":
+        //         console.log(a+b)
+        //     break;
+
+        //     case "-":
+        //         console.log(a-b)
+        //     break;
+
+
+        //     case "*":
+        //         console.log(a*b)
+        //     break;
+
+        //     case "/":
+        //         console.log(a/b)
+        //     break;
+            
+            
+
+        
+        
+        //     default:
+        //         console.log("Invalid Operation");
+                
+        //         break;
+        // }
+
+
+
+
+        // let arr=[3,2,1,4,5]
+        // console.log(Math.min(...arr));
+        // console.log(Math.max(...arr));
+
+        // arr.sort()
+        // console.log(arr);
+
+        // arr.reverse()
+        // console.log(arr);
+
+
+
+
+    //     function validateForm() {
+    //     let form_name = document.getElementById("name").value.trim();
+    //     let form_email=document.getElementById("email").value.trim();
+    //     let form_age= parseInt(document.getElementById("age").value);
+    //     let output = document.getElementById("output")
+
+    //     if(form_name===""){
+    //         alert("name can't be empty")
+            
+    //     }
+
+    //     if(form_age<18 || form_age>100){
+    //         alert("Please enter valid Age")
+    //     }
+    // }
+
+
+
+
+
+
+    // let student={
+    //     name:"John",
+    //     age:20,
+    //     grade:"A"
+    // }
+    // console.log(student);
+
+    // student.class=12
+    // console.log(student);
+
+    // student.grade="B"
+    // console.log(student);
+
+
+let arr = [1, 2, 3, 4, 5];
+
+let operations_on_array = (arr) => {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] % 2 !== 0) {
+            arr.splice(i, 1);
+        }
+    }
+    console.log(arr);
+
+    arr.map((x, index) => {
+        arr[index] = x * 2;
+    });
+    console.log(arr);
+
+    let sum = arr.reduce((acc, curr) => acc + curr, 0);
+    console.log(sum);
+};
+
+operations_on_array(arr);
+
+    
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+/* ===== General Reset & Body ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f8fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background-color: #008cff;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffdd00;
+}
+
+/* ===== Header Section ===== */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('travel-banner.jpg') no-repeat center/cover;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* ===== Table Styles ===== */
+section table {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+section table th, 
+section table td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+section table th {
+  background: #008cff;
+  color: white;
+  font-size: 1.1rem;
+}
+
+section table tr:nth-child(even) {
+  background: #f2f8ff;
+}
+
+section table tr:hover {
+  background: #eaf5ff;
+  transition: 0.3s;
+}
+
+/* ===== Booking Section ===== */
+section h1 {
+  text-align: center;
+  color: #008cff;
+  margin-top: 50px;
+}
+
+section p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto 60px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+form input, 
+form select, 
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #008cff;
+  box-shadow: 0 0 5px rgba(0, 140, 255, 0.4);
+  outline: none;
+}
+
+form button {
+  background: #008cff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+form button:hover {
+  background: #006bb3;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  section table {
+    font-size: 0.9rem;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
+
+
+/* ===== Book Here Section ===== */
+section h1 {
+  text-align: center;
+  color: #008cff;
+  margin-top: 40px;
+}
+
+section p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.book-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 28px;
+  background: #008cff;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  text-align: center;
+  margin: 0 auto;
+  display: block; /* centers the button */
+  width: fit-content;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.book-btn:hover {
+  background: #006bb3;
+  transform: translateY(-2px);
+}
+
+.book-btn:active {
+  background: #004f80;
+  transform: translateY(1px);
+}

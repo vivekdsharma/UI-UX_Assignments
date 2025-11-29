@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Bliss - Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Travel Bliss</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="packages.html">Packages</a>
+            <a href="booking.html">Booking</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class="gallery">
+        <div class="card">
+            <img src="manali_mountain_view.jfif" alt="Manali Mountain View" data-large="manali_mountain_view.jfif">
+            <div class="card-caption">Manali: Snow Treks & Scenic Valleys</div>
+        </div>
+        <div class="card">
+            <img src="jaipur.jfif" alt="Jaipur City Guide" data-large="jaipur.jfif">
+            <div class="card-caption">Jaipur: The Pink City and Majestic Forts</div>
+        </div>
+        <div class="card">
+            <img src="goa.jfif" alt="Goa Beach Party" data-large="goa.jfif">
+            <div class="card-caption">Goa: Sun, Sand, and Sea Adventures</div>
+        </div>
+        <div class="card">
+            <img src="amritsar.jfif" alt="Golden Temple Amritsar" data-large="amritsar.jfif">
+            <div class="card-caption">Amritsar: Spiritual Peace at Golden Temple</div>
+        </div>
+        <div class="card">
+            <img src="patiala.jfif" alt="Patiala Fort and Culture" data-large="patiala.jfif">
+            <div class="card-caption">Patiala: Royal Heritage and Culture</div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('nav a');
+        const currentPath = window.location.pathname.split('/').pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const closeBtn = document.querySelector('.close');
+
+        galleryImages.forEach(img => {
+            img.onclick = function() {
+                modal.style.display = 'block';
+                modalImg.src = this.getAttribute('data-large');
+                modalImg.alt = this.alt;
+            };
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        };
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

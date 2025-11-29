@@ -1,0 +1,42 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: whitesmoke;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background: #222;
+  padding: 1rem 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links li {
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff5722;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+

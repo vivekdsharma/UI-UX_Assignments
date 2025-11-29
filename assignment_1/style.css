@@ -1,0 +1,161 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #dae9ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(120deg, #333, #555);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.tagline {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+section {
+    padding: 20px;
+    margin: 15px auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #dae9ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(120deg, #333, #555);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.tagline {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+section {
+    padding: 20px;
+    margin: 15px auto;
+    background: white;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: #333;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid #666;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+
+
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: #333;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid #666;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+

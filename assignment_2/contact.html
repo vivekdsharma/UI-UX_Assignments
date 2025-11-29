@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Bliss - Contact Us</title>
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Bliss</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="packages.html">Packages</a>
+            <a href="booking.html">Booking</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Us</h2>
+        <p>Email: info@travelbliss.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <div class="social">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook" width="24">Facebook</a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram" width="24">Instagram</a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter" width="24">Twitter</a>
+        </div>
+        <div class="tips">
+            <h3>Travel Tips & Must-Visit Places</h3>
+            <ul>
+                <li>Carry photocopies of your important documents</li>
+                <li>Try local food for an authentic experience</li>
+                <li>Respect local customs and traditions</li>
+                <li>Always keep emergency contacts handy</li>
+                <li>Visit must-see spots: Golden Temple, Taj Mahal, beaches of Goa, Himalayan valleys</li>
+            </ul>
+        </div>
+    </main>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('nav a');
+        const currentPath = window.location.pathname.split('/').pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+<script src="assin6.js"></script>
+</body>
+</html>

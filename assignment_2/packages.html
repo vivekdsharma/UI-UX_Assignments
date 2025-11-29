@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="packages.css">
+    <title>Our Packages</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home Page</a>
+        <a href="packages.html">Our Packages</a>
+        <a href="booking.html">Bookings</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <header>
+        <h1>Travel Packages</h1>
+        <p>Explore our exclusive travel packages designed for every type of traveler.</p>
+    </header>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Package Name</th>
+                    <th>Destination</th>
+                    <th>Duration</th>
+                    <th>Base Price</th>
+                    <th>Final Price</th>
+                </tr>
+            </thead>
+            <tbody id="packages-table-body">
+                </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h1>Book Here</h1>
+        <p>Ready to book your dream vacation? Contact us today!</p>
+        <a href="booking.html" class="book-btn">Click Here</a>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('nav a');
+        const currentPath = window.location.pathname.split('/').pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+    <script>
+        const packages = [
+            { id: 'maldives', destination: 'Maldives', durationDays: 7, basePrice: 1200, season: 'summer' },
+            { id: 'himalayas', destination: 'Himalayas', durationDays: 10, basePrice: 1500, season: 'winter' },
+            { id: 'europe', destination: 'Europe', durationDays: 14, basePrice: 2000, season: 'autumn' },
+            { id: 'dubai', destination: 'Dubai', durationDays: 5, basePrice: 800, season: 'summer' }
+        ];
+
+        const tableBody = document.getElementById('packages-table-body');
+
+        packages.forEach(pkg => {
+            let finalPrice = pkg.basePrice;
+
+            if (pkg.season === 'summer') {
+                finalPrice *= 1.1;
+            } else if (pkg.season === 'winter') {
+                finalPrice *= 1.2; 
+            }
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${pkg.destination}</td>
+                <td>${pkg.destination}</td>
+                <td>${pkg.durationDays} Days</td>
+                <td>$${pkg.basePrice}</td>
+                <td>$${finalPrice.toFixed(2)}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    </script>
+
+    <script src="assin6.js"></script>
+</body>
+</html>
