@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home Page</a>
+        <a href="packages.html">Our Packages</a>
+        <a href="booking.html">Bookings</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <header id="intro">
+        <h1>Travel Bliss</h1>
+        <h3>Welcome to Our Travel Agency</h3>
+        <p>Your adventure starts here!</p>
+    </header>
+    <section>
+        <img src="travelbliss.jfif" alt="Company Banner" height="350px" width="350px">
+    </section>
+    <section>
+        <p>We are a leading travel agency dedicated to providing unforgettable experiences. Whether you're looking for a relaxing beach vacation or an adventurous mountain trek, we have the perfect package for you.</p>
+        <p>Explore our wide range of travel packages designed to suit every budget and preference. From exotic destinations to local getaways, we have something for everyone.</p>
+        <p>Contact us today to start planning your next adventure!</p>
+        
+    </section>
+    <section>
+        <h2>Featured Packages</h2>
+        <ul>
+            <li>Beach Paradise - Relax on the sun-kissed beaches of Maldives.</li>
+            <li>Mountain Adventure - Trek through the majestic Himalayas.</li>
+            <li>Cultural Journey - Discover the rich heritage of Europe.</li>
+        </ul>
+    </section>
+    <section>
+
+        <footer>
+            Copywrite &copy; 2025 Company Name. All rights reserved.
+            <br>
+
+        </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('nav a');
+        const currentPath = window.location.pathname.split('/').pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+<script src="assin6.js"></script>
+        
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Bliss - Booking</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Bliss</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="packages.html">Packages</a>
+            <a href="booking.html">Booking</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <form id="booking-form">
+        <h2>Book Your Adventure</h2>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="checkIn">Check-In Date</label>
+        <input type="date" id="checkIn" name="checkIn" required>
+
+        <label for="checkOut">Check-Out Date</label>
+        <input type="date" id="checkOut" name="checkOut" required>
+
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" name="guests" min="1" required>
+
+        <label for="package-select">Package Selection</label>
+        <select id="package-select" name="package-select" required>
+            <option value="">--Select a package--</option>
+            <option value="himalayan">Himalayan Adventure</option>
+            <option value="golden-triangle">Golden Triangle</option>
+            <option value="goa">Goa Beach Escape</option>
+            <option value="punjab">Punjab Heritage Tour</option>
+        </select>
+
+        <label for="promoCode">Promo Code</label>
+        <input type="text" id="promoCode" name="promoCode">
+
+        <p class="total">Estimated Total: <span id="estimated-total">$0.00</span></p>
+
+        <button type="submit" id="submit-btn">Book Now</button>
+    </form>
+
+
+<script src="assin6.js"></script>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('nav a');
+        const currentPath = window.location.pathname.split('/').pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+
+<script>
+        const packageDetails={
+            'himalayan':{price:1500},
+            'golden-triangle':{price:1000},
+            'goa':{price:800},
+            'punjab':{price:600}
+        }
+
+        const form = document.getElementById('booking-form');
+        const checkInInput = document.getElementById('checkIn');
+        const checkOutInput = document.getElementById('checkOut');
+        const guestsInput = document.getElementById('guests');
+        const packageSelect = document.getElementById('package-select');
+        const promoCodeInput = document.getElementById('promoCode');
+        const totalSpan = document.getElementById('estimated-total');
+        const submitBtn = document.getElementById('submit-btn');
+
+        let calculateTotal=()=>{
+            let check_in_date= new Date (checkInInput.value)
+            let check_out_date = new Date (checkOutInput.value)
+            let selected_package= packageSelect.value
+            let No_of_guest=guestsInput.value
+            let promocode = promoCodeInput.value
+
+            const nights= check_out_date-check_in_date
+            console.log(nights);
+            
+
+        }
+
+        form.addEventListener('change', calculateTotal);
+</script>
+    
+   
+</body>
+</html>
